@@ -24,3 +24,14 @@ function calcule() {
         document.getElementById("resultado").innerHTML = "ERROR";
     }
 }
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+window.onload = () => {
+    var cleanBtn = document.querySelector(".clean");
+    var backspaceBtn = document.querySelector(".backspace");
+    var calculeBtn = document.querySelector(".calcule");
+
+    cleanBtn.addEventListener("click", clean);
+    backspaceBtn.addEventListener("click", backspace);
+    calculeBtn.addEventListener("click", calcule);
+};
